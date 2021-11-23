@@ -10,9 +10,6 @@ jobs:
   process-deploy:
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout action
-      uses: actions/checkout@v2
-
     - name: Login to DockerHub
       uses: docker/login-action@v1
       with:
