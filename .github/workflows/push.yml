@@ -16,6 +16,8 @@ jobs:
         username: ${{ secrets.DOCKERHUB_USERNAME }}
         password: ${{ secrets.DOCKERHUB_TOKEN }}
 
+    - name: Checkout action
+      uses: actions/checkout@v2
     - name: Django Coverage action
       uses: actions/python-django-coverage-gitHub-action@0.9
       with:
