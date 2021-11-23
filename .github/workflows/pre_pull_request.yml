@@ -1,0 +1,14 @@
+name: pre_pull_request
+
+on:
+  push:
+    branches: [develop]
+  pull_request:
+    branches: [develop]
+
+jobs:
+  run_test:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Run test
+      run: python -m unittest
